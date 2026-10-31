@@ -83,11 +83,51 @@
             color: white;
             padding: 15px;
         }
+        /* Dark Mode styling */
+        .dark-mode-control {
+            text-align: right;
+            padding: 10px;
+        }
+        
+        .featured-box {
+            background-color: #E8F5E9;
+            border: 2px solid #2E7D32;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+        
+        /* Dark Mode styles */
+        body.dark-mode {
+            background-color: #121212;
+            color: white;
+        }
+        
+        body.dark-mode section,
+        body.dark-mode .dark-mode-control {
+            background-color: #242424;
+            color: white;
+        }
+        
+        body.dark-mode h2,
+        body.dark-mode a {
+            color: #81C784;
+        }
+        
+        body.dark-mode .featured-box {
+            background-color: #303030;
+        }
     </style>
 </head>
 
 <body>
-
+    <!-- Dark Mode checkbox -->
+    <div class="dark-mode-control">
+        <label for="darkAppearance">
+            <input type="checkbox" id="darkAppearance" style="width: auto;">
+            Dark Mode
+        </label>
+    </div>
     <!-- The welcome message shown by JavaScript -->
     <header>
         <h1>My Student Portfolio</h1>
