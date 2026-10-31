@@ -1,1 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Portfolio settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zion's portfolio showcasing software development projects.">
+    <title>Zion James' Portfolio</title>
+    <style>
+        /* Styling portfolio */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #F3F4F6;
+            color: #000000;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #2563EB;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+        nav {
+            background-color: #000000;
+            text-align: center;
+            padding: 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+        }
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
 
+        section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #2563EB;
+        }
+
+        .project {
+            margin-bottom: 20px;
+        }
+
+        .project a {
+            color: #2563EB;
+        }
+
+        form label {
+            display: block;
+            margin-top: 12px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #2563EB;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #000000;
+            color: white;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- The welcome message shown by JavaScript -->
+    <header>
+        <h1>My Student Portfolio</h1>
+        <p id="welcomeMessage">Welcome to my portfolio!</p>
+    </header>
+
+    <!-- The menu linked to three sections -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+
+        <!-- About section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Hello! My name is Zion James. I am a student at ECPI University
+                in the Software Development program, with an expected
+                graduation year of 2027.
+            </p>
+            <p>
+                I am developing my skills in software development, JavaScript, applications,
+                and HTML. I enjoy learning building projects and new concepts
+                that will help me gain practical experience for my future career.
+            </p>
+        </section>
+
+        <!-- Projects section -->
+        <section id="projects">
+            <h2>My Projects</h2>
+            <p>
+                Here are some projects I have worked on during my courses.
+            </p>
+
+            <div class="project">
+                <h3>Project 1: HealthyBites</h3>
+                <a href="https://github.com/" target="_blank">
+                    <img src="https://placehold.co/300x150/2563EB/FFFFFF?text=HealthyBites"
+                         alt="HealthyBites project preview">
+                </a>
+                <p>A project focused on nutrition and healthy eating.</p>
+            </div>
+
+          <!-- Project 2: Memory Line -->
+            <div class="project">
+                <h3>Project 2: Memory Line</h3>
+                    <a href="https://www.figma.com/design/yWjUAQ6O0UmMqKM9BpwEVc/Memory-Line-Submission--1-?node-id=0-1&t=YYDXETZSNUG9OPOa-1"
+                       target="_blank">
+                        <img src="https://placehold.co/300x150/2563EB/FFFFFF?text=MemoryLine"
+                                     alt="Memory Line project preview">
+                    </a>
+                    <p>
+                    Memory Line is a mobile app that allows people to organize and revisit personal memories.
+                    The app features photo galleries, an interactive timeline, and collaborative memory sharing.
+                    </p>
+            </div>
+
+            <div class="project">
+                <h3>Project 3: JavaScript Projects</h3>
+                <a href="https://github.com/" target="_blank">
+                    <img src="https://placehold.co/300x150/2563EB/FFFFFF?text=JavaScript"
+                         alt="JavaScript project preview">
+                </a>
+                <p>These are just beginner JavaScript activities.</p>
+            </div>
+        </section>
+
+        <!-- Contact section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Use the form below to send me a message.</p>
+
+            <form action="mailto:your-email@example.com" method="post"
+                  enctype="text/plain">
+
+                <label for="senderName">Your Name:</label>
+                <input type="text" id="senderName" name="Name" required>
+
+                <label for="emailAddress">Email Address:</label>
+                <input type="email" id="emailAddress" name="Email" required>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="Subject" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="Message" rows="5" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Zion James' Portfolio</p>
+    </footer>
+
+    <!-- JavaScript prompts the visitor for their name and updates the welcome message -->
+    <script>
+        "use strict";
+
+        // Ask the visitor for their name
+        var userName = prompt("Welcome! What is your name?");
+
+        // Display a personalized welcome message
+        if (userName !== null && userName.trim() !== "") {
+            document.getElementById("welcomeMessage").textContent =
+                "Welcome to my portfolio, " + userName + "!";
+        }
+    </script>
+
+</body>
+</html>
