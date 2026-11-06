@@ -8,23 +8,23 @@
         <title>Zion James' Portfolio</title>
         <style>
             /* Styling portfolio */
-            body { font-family: Arial, sans-serif; margin: 0; background-color: #F3F4F6; color: #000000; line-height: 1.6; }
+            body { font-family: Arial, sans-serif; margin: 0; background-color: #F3F4F6; color: black; line-height: 1.6; }
             header { background-color: #2E7D32; color: white; text-align: center; padding: 30px; }
-            nav { background-color: #000000; text-align: center; padding: 15px; }
+            nav { background-color: black; text-align: center; padding: 15px; }
             nav a { color: white; text-decoration: none; margin: 15px; }
-            article { max-width: 1000px; margin: auto; padding: 20px; }
-            .content-section { background-color: white; padding: 25px; margin-bottom: 20px; border-radius: 8px; }
+            article { max-width: 1000px; margin: auto; padding: 25px; }
+            .content-section { background-color: white; padding: 30px; margin-bottom: 20px; border-radius: 8px; }
             h2 { color: #2E7D32; }
             .project { margin-bottom: 20px; }
             .project a { color: #2E7D32; }
             form label { display: block; margin-top: 12px; }
             input, textarea { width: 100%; padding: 10px; margin-top: 5px; box-sizing: border-box; }
             button { background-color: #2E7D32; color: white; border: none; padding: 12px 20px; margin-top: 15px; cursor: pointer; }
-            footer { text-align: center; background-color: #000000; color: white; padding: 15px; }
+            footer { text-align: center; background-color: black; color: white; padding: 15px; }
     
             /* Dark Mode styling */
             .colorApp { text-align: right; padding: 10px; }
-            .featured-box { background-color: #E8F5E9; border: 2px solid #2E7D32; padding: 15px; margin-bottom: 15px; border-radius: 8px; }
+            .featured-box { background-color: #E8F5E9; border: 2px solid #2E7D32; padding: 20px; margin-bottom: 15px; border-radius: 8px; }
             .featured-box img { max-width: 300px; width: 100%; height: auto; }
             .skills-list { padding-left: 25px; }
     
@@ -35,7 +35,7 @@
             body.darkApp .featured-box { background-color: #303030; color: white; }
             /*Styling the custom model welcome*/
             .modal { display: flex; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center; }
-            .modal-content { background-color: white; color: black; padding: 25px; border-radius: 8px; text-align: center; max-width: 400px; width: 80%; }
+            .modal-content { background-color: white; color: black; padding: 33px; border-radius: 8px; text-align: center; max-width: 400px; width: 80%; }
             /*Modal hidden when closed*/
             .modal.hidden { display: none; }    
             /*Adding a tooltip to the Submit button */
@@ -50,7 +50,7 @@
                 transform: translateX(-50%);
                 background-color: black;
                 color: white;
-                padding: 8px;
+                padding: 10px;
                 border-radius: 7px;
                 white-space: nowrap;
                 font-size: 14px;
@@ -136,40 +136,9 @@
                 <p>
                     Here are some projects I have worked on during my courses.
                 </p>
-    
-                <div class="project">
-                    <h3>Project 1: HealthyBites</h3>
-                    <a href="https://github.com/" target="_blank">
-                        <img src="https://placehold.co/300x150/2E7D32/FFFFFF?text=HealthyBites"
-                             alt="HealthyBites project preview">
-                    </a>
-                    <p>A project focused on nutrition and healthy eating.</p>
-                </div>
-    
-              <!-- Project 2: Memory Line -->
-                <div class="project">
-                    <h3>Project 2: Memory Line</h3>
-                        <a href="https://www.figma.com/design/yWjUAQ6O0UmMqKM9BpwEVc/Memory-Line-Submission--1-?node-id=0-1&t=YYDXETZSNUG9OPOa-1"
-                           target="_blank">
-                            <img src="https://placehold.co/300x150/2E7D32/FFFFFF?text=MemoryLine"
-                                         alt="Memory Line project preview">
-                        </a>
-                        <p>
-                        Memory Line is a mobile app that allows people to organize and revisit personal memories.
-                        The app features photo galleries, an interactive timeline, and collaborative memory sharing.
-                        </p>
-                </div>
-    
-                <div class="project">
-                    <h3>Project 3: JavaScript Projects</h3>
-                    <a href="https://github.com/" target="_blank">
-                        <img src="https://placehold.co/300x150/2E7D32/FFFFFF?text=JavaScript"
-                             alt="JavaScript project preview">
-                    </a>
-                    <p>These are just beginner JavaScript activities.</p>
-                </div>
+                <!--The javascript geenerating the projects -->
+                <div id="projectList"></div>
             </div>
-    
             <!-- Contact section -->
             <section id="contactMe" class="content-section">
                 <h2>Contact Me</h2>
@@ -232,7 +201,7 @@
             }
             //Adding a new paragraph dynamically
             var projSummary = document.createElement("p");
-            projSummary.textContent = "I complete hands-on projects to challenge and develop my programming skills.";
+            projSummary.textContent = "I complete hands-on projects to challenge and improve my programming skills.";
             document.getElementById("myProjects").appendChild(projSummary);
             var darkPref = document.getElementById("darkAppearance");
             //Modifying and selecting page elements
@@ -276,6 +245,57 @@
                     confirmTime.textContent = "Message sent successfully, " + somebodyName + "!";
                 }, 2000);
             });
+            
+            // Creating project objects
+            var projObject = [
+                {
+                    title: "HealthyBites",
+                    summary: "A project focused on nutrition and healthy eating.",
+                    image: "https://placehold.co/300x150/2E7D32/FFFFFF?text=HealthyBites",
+                    link: "https://github.com/"
+                },
+                {
+                    title: "Memory Line",
+                    summary: "A mobile app that organizes personal memories through photo galleries, timelines, and memory sharing.",
+                    image: "https://placehold.co/300x150/2E7D32/FFFFFF?text=MemoryLine",
+                    link: "https://github.com/"
+                },
+                {
+                    title: "JavaScript Projects",
+                    summary: "They were beginner JavaScript activities and programming exercises.",
+                    image: "https://placehold.co/300x150/2E7D32/FFFFFF?text=JavaScript",
+                    link: "https://github.com/"
+                }
+            ];
+            //Searching and saving projects using session storage
+            var savedProjects = sessionStorage.getItem("projObject");
+            if (savedProjects === null) {
+                sessionStorage.setItem("projectData", JSON.stringify(projObject));
+            } else {
+                projObject = JSON.parse(savedProjects);
+            }
+            // Showing the projects dynamically
+            var projectList = document.getElementById("projectList");
+            for (var i = 0; i < projObject.length; i++) {
+                var projectBox = document.createElement("div");
+                projectBox.className = "project";
+                var projectTitle = document.createElement("h3");
+                projectTitle.textContent =projObject[i].title;
+                var projImg = document.createElement("img");
+                projImg.src = projObject[i].image;
+                projImg.alt = projObject[i].title + " project preview";
+                var projLink = document.createElement("a");
+                projLink.href = projObject[i].link;
+                projLink.textContent = "View Repository";
+                projLink.target = "_blank";
+                var projSummary = document.createElement("p");
+                projSummary.textContent = projObject[i].summary;
+                projectBox.appendChild(projectTitle);
+                projectBox.appendChild(projImg);
+                projectBox.appendChild(projSummary);
+                projectBox.appendChild(projLink);
+                projectList.appendChild(projectBox);
+            }
         </script>    
     </body>
 </html>
