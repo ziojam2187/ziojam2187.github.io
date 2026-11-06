@@ -234,20 +234,29 @@
             var projSummary = document.createElement("p");
             projSummary.textContent = "I complete hands-on projects to challenge and develop my programming skills.";
             document.getElementById("myProjects").appendChild(projSummary);
-            var darkAppearance = document.getElementById("darkAppearance");
+            var darkPref = document.getElementById("darkAppearance");
             //Modifying and selecting page elements
             var projTitle = document.querySelector("#myProjects h2");
             projTitle.style.borderBottom = "2px solid #2E7D32";
             var greetingNote = document.getElementById("welcomeMessage");
             greetingNote.style.fontWeight = "bold";
-            //The dark mode function
-            darkAppearance.addEventListener("change", function() {
-                if (darkAppearance.checked) {
+            //Saving the person's dark mode preference
+            var savedPref = localStorage.getItem("darkAppearance");
+            if (savedPref === "enabled") {
+                darkPref.checked = true;
+                document.body.classList.add("darkApp");
+            }
+            ///Saving Dark Mode preference when the checkbox switched
+            darkPref.addEventListener("change", function() {
+                if (darkPref.checked) {
                     document.body.classList.add("darkApp");
+                    localStorage.setItem("darkAppearance", "enabled");
                 } else {
                     document.body.classList.remove("darkApp");
+                    localStorage.setItem("darkAppearance", "disabled");
                 }
             });
+
             // Adding a confirmation to the Contact form that will be timed
             var contactDetails = document.getElementById("contactForm");
             var confirmTime = null;
