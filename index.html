@@ -1,246 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!--Portfolio settings -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Zion's portfolio showcasing software development projects.">
-    <title>Zion James' Portfolio</title>
-    <style>
-        /* Styling portfolio */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #F3F4F6;
-            color: #000000;
-            line-height: 1.6;
-        }
-        header {
-            background-color: #2E7D32;
-            color: white;
-            text-align: center;
-            padding: 30px;
-        }
-        nav {
-            background-color: #000000;
-            text-align: center;
-            padding: 15px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 15px;
-        }
-        main {
-            max-width: 1000px;
-            margin: auto;
-            padding: 20px;
-        }
-
-        section {
-            background-color: white;
-            padding: 25px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-        }
-
-        h2 {
-            color: #2E7D32;
-        }
-
-        .project {
-            margin-bottom: 20px;
-        }
-
-        .project a {
-            color:#2E7D32;
-        }
-
-        form label {
-            display: block;
-            margin-top: 12px;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            box-sizing: border-box;
-        }
-
-        button {
-            background-color:#2E7D32;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            margin-top: 15px;
-            cursor: pointer;
-        }
-
-        footer {
-            text-align: center;
-            background-color: #000000;
-            color: white;
-            padding: 15px;
-        }
-        /* Dark Mode styling */
-        .colorApp {
-            text-align: right;
-            padding: 10px;
-        }
+    <head>
+        <!--Portfolio settings -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Zion's portfolio showcasing software development projects.">
+        <title>Zion James' Portfolio</title>
+         <style>
+                /* Styling portfolio */
+                body { font-family: Arial, sans-serif; margin: 0; background-color: #F3F4F6; color: #000000; line-height: 1.6; }
+                header { background-color: #2E7D32; color: white; text-align: center; padding: 30px; }
+                nav { background-color: #000000; text-align: center; padding: 15px; }
+                nav a { color: white; text-decoration: none; margin: 15px; }
+                article { max-width: 1000px; margin: auto; padding: 20px; }
+                .content-section { background-color: white; padding: 25px; margin-bottom: 20px; border-radius: 8px; }
+                h2 { color: #2E7D32; }
+                .project { margin-bottom: 20px; }
+                .project a { color: #2E7D32; }
+                form label { display: block; margin-top: 12px; }
+                input, textarea { width: 100%; padding: 10px; margin-top: 5px; box-sizing: border-box; }
+                button { background-color: #2E7D32; color: white; border: none; padding: 12px 20px; margin-top: 15px; cursor: pointer; }
+                footer { text-align: center; background-color: #000000; color: white; padding: 15px; }
         
-        .featured-box {
-            background-color: #E8F5E9;
-            border: 2px solid #2E7D32;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 8px;
-        }
+                /* Dark Mode styling */
+                .colorApp { text-align: right; padding: 10px; }
+                .featured-box { background-color: #E8F5E9; border: 2px solid #2E7D32; padding: 15px; margin-bottom: 15px; border-radius: 8px; }
+                .featured-box img { max-width: 300px; width: 100%; height: auto; }
+                .skills-list { padding-left: 25px; }
         
-        /* Dark Mode styles */
-        body.darkApp {
-            background-color: #121212;
-            color: white;
-        }
-        
-        body.darkApp section,
-        body.darkApp .colorApp {
-            background-color: #242424;
-            color: white;
-        }
-        
-        body.darkApp h2,
-        body.darkApp a {
-            color: #81C784;
-        }
-        
-        body.darkApp .featured-box {
-            background-color: #303030;
-        }
-    </style>
-</head>
-
-<body>
-    <!-- Dark Mode checkbox -->
-    <div class="dark-mode-control">
-        <label for="darkAppearance">
-            <input type="checkbox" id="darkAppearance" style="width: auto;">
-            Dark Mode
-        </label>
-    </div>
-    <!-- The welcome message shown by JavaScript -->
-    <header>
-        <h1>My Student Portfolio</h1>
-        <p id="welcomeMessage">Welcome to my portfolio!</p>
-    </header>
-
-    <!-- The menu linked to three sections -->
-    <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <main>
-
-        <!-- About section -->
-        <section id="about">
-            <h2>About Me</h2>
-            <p>
-                Hello! My name is Zion James. I am a student at ECPI University
-                in the Software Development program, with an expected
-                graduation year of 2027.
-            </p>
-            <p>
-                I am developing my skills in software development, JavaScript, applications,
-                and HTML. I enjoy learning building projects and new concepts
-                that will help me gain practical experience for my future career.
-            </p>
-        </section>
-
-        <!-- Projects section -->
-        <section id="projects">
-            <h2>My Projects</h2>
-            <p>
-                Here are some projects I have worked on during my courses.
-            </p>
-
-            <div class="project">
-                <h3>Project 1: HealthyBites</h3>
-                <a href="https://github.com/" target="_blank">
-                    <img src="https://placehold.co/300x150/2E7D32/FFFFFF?text=HealthyBites"
-                         alt="HealthyBites project preview">
-                </a>
-                <p>A project focused on nutrition and healthy eating.</p>
+                /* More dark Mode styles */
+                body.darkApp { background-color: #121212; color: white; }
+                body.darkApp .content-section, body.darkApp .colorApp { background-color: #242424; color: white; }
+                body.darkApp h2, body.darkApp a { color: #81C784; }
+                body.darkApp .featured-box { background-color: #303030; color: white; }
+            </style>
+    </head>
+    
+    <body>
+        <!-- Dark Mode checkbox -->
+        <div class="dark-mode-control">
+            <label for="darkAppearance">
+                <input type="checkbox" id="darkAppearance" style="width: auto;">
+                Dark Mode
+            </label>
+        </div>
+        <!-- The welcome message shown by JavaScript -->
+        <header>
+            <h1>My Student Portfolio</h1>
+            <p id="welcomeMessage">Welcome to my portfolio!</p>
+        </header>
+    
+        <!-- The menu linked to three sections -->
+        <nav>
+            <a href="#aboutMe">About</a>
+            <a href="#featuredCon">Featured Content</a>
+            <a href="#myProjects">Projects</a>
+            <a href="#contactMe">Contact</a>
+        </nav>
+    
+        <article>
+    
+            <!-- About section -->
+            <div id="aboutMe" class="content-section">
+                <h2>About Me</h2>
+                <p>
+                    Hello! My name is Zion James. I am a student at ECPI University
+                    in the Software Development program, with an expected
+                    graduation year of 2027.
+                </p>
+                <p>
+                    I am developing my skills in software development, JavaScript, applications,
+                    and HTML. I enjoy learning and building projects with new concepts
+                    that will help me gain practical experience for my future career.
+                </p>
+                    <!-- Skills list generated using JavaScript -->
+                    <h3>My Skills</h3>
+                    <ul id="skillsList" class="skills-list"></ul>
             </div>
-
-          <!-- Project 2: Memory Line -->
-            <div class="project">
-                <h3>Project 2: Memory Line</h3>
-                    <a href="https://www.figma.com/design/yWjUAQ6O0UmMqKM9BpwEVc/Memory-Line-Submission--1-?node-id=0-1&t=YYDXETZSNUG9OPOa-1"
-                       target="_blank">
-                        <img src="https://placehold.co/300x150/2E7D32/FFFFFF?text=MemoryLine"
-                                     alt="Memory Line project preview">
-                    </a>
+            <!-- Featured Content section -->
+            <div id="featuredCon" class="content-section">
+                <h2>Featured Content</h2>
+            
+                <!-- University Resources -->
+                <div id="uniResources" class="featured-box">
+                    <h3>University Resources</h3>
                     <p>
-                    Memory Line is a mobile app that allows people to organize and revisit personal memories.
-                    The app features photo galleries, an interactive timeline, and collaborative memory sharing.
+                        <a href="https://www.ecpi.edu/programs/software-development-bachelor-degree" target="_blank">
+                            Software Development Program
+                        </a>
                     </p>
-            </div>
+                </div>
+            <!-- Projects section -->
+            <div id="myProjects">
+                <h2>My Projects</h2>
+                <p>
+                    Here are some projects I have worked on during my courses.
+                </p>
+    
+                <div class="project">
+                    <h3>Project 1: HealthyBites</h3>
+                    <a href="https://github.com/" target="_blank">
+                        <img src="https://placehold.co/300x150/2E7D32/FFFFFF?text=HealthyBites"
+                             alt="HealthyBites project preview">
+                    </a>
+                    <p>A project focused on nutrition and healthy eating.</p>
+                </div>
+    
+              <!-- Project 2: Memory Line -->
+                <div class="project">
+                    <h3>Project 2: Memory Line</h3>
+                        <a href="https://www.figma.com/design/yWjUAQ6O0UmMqKM9BpwEVc/Memory-Line-Submission--1-?node-id=0-1&t=YYDXETZSNUG9OPOa-1"
+                           target="_blank">
+                            <img src="https://placehold.co/300x150/2E7D32/FFFFFF?text=MemoryLine"
+                                         alt="Memory Line project preview">
+                        </a>
+                        <p>
+                        Memory Line is a mobile app that allows people to organize and revisit personal memories.
+                        The app features photo galleries, an interactive timeline, and collaborative memory sharing.
+                        </p>
+                </div>
+    
+                <div class="project">
+                    <h3>Project 3: JavaScript Projects</h3>
+                    <a href="https://github.com/" target="_blank">
+                        <img src="https://placehold.co/300x150/2E7D32/FFFFFF?text=JavaScript"
+                             alt="JavaScript project preview">
+                    </a>
+                    <p>These are just beginner JavaScript activities.</p>
+                </div>
+            </section>
+    
+            <!-- Contact section -->
+            <section id="contactMe" class="content-section">
+                <h2>Contact Me</h2>
+                <p>Use the form below to send me a message.</p>
+    
+                <form id="contactForm" action="mailto:your-email@example.com" method="post"
+                      enctype="text/plain">
+    
+                    <label for="senderName">Your Name:</label>
+                    <input type="text" id="senderName" name="Name" required>
+    
+                    <label for="emailAddress">Email Address:</label>
+                    <input type="email" id="emailAddress" name="Email" required>
+    
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="Subject" required>
+    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="Message" rows="5" required></textarea>
+    
+                    <button type="submit" id="submitButton">Submit</button>
+                </form>
+            </section>
+    
+        </article>
+    
+        <footer>
+            <p>&copy; 2026 Zion James' Portfolio</p>
+        </footer>
+    
+        <!-- JavaScript prompts the visitor for their name and updates the welcome message -->
+        <script>
+            "use strict";
+    
+            // Ask the visitor for their name
+            var userName = prompt("Welcome! What is your name?");
+    
+            // Display a personalized welcome message
+            if (userName !== null && userName.trim() !== "") {
+                document.getElementById("welcomeMessage").textContent =
+                    "Welcome to my portfolio, " + userName + "!";
+            }
+            // Display Featured Content based on the number of projects
+            var projectNum = document.querySelectorAll("#myProjects .project").length;
+            
+            if (projectNum < 3) {
+                document.getElementById("uniResources").style.display = "block";
+                document.getElementById("personalProjects").style.display = "block";
+            } else {
+                document.getElementById("uniResources").style.display = "none";
+                document.getElementById("personalProjects").style.display = "block";
+            }
+            //Making an array of skills
+            var skills = ["HTML", "CSS", "JavaScript", "Git", "GitHub"];
+            
+            var showSkills = document.getElementById("skillsList");
+            
+            for (var i = 0; i < skills.length; i++) {
+                var skill = document.createElement("li");
+                skillPath.textContent = skills[i];
+                showSills.appendChild(skillPath);
+            }
+            //The dark mode function
+            var darkAppearance = document.getElementById("darkAppearance");
+            
+            darkAppearance.addEventListener("change", function() {
+                if (darkAppearance.checked) {
+                    document.body.classList.add("darkApp");
+                } else {
+                    document.body.classList.remove("darkApp");
+                }
+            });
+            // Add an event listener to the Contact form Submit button
+            var submitButton = document.getElementById("submitButton");
+            
+            submitButton.addEventListener("click", function(event) {
+                event.preventDefault();
+            
+                var visitorName = document.getElementById("senderName").value;
+            
+                if (document.getElementById("contactForm").checkValidity()) {
+                    alert("Thank you, " + visitorName + ", your message has been sent!");
+                } else {
+                    document.getElementById("contactForm").reportValidity();
+                }
+            });
+   
 
-            <div class="project">
-                <h3>Project 3: JavaScript Projects</h3>
-                <a href="https://github.com/" target="_blank">
-                    <img src="https://placehold.co/300x150/2E7D32/FFFFFF?text=JavaScript"
-                         alt="JavaScript project preview">
-                </a>
-                <p>These are just beginner JavaScript activities.</p>
-            </div>
-        </section>
-
-        <!-- Contact section -->
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>Use the form below to send me a message.</p>
-
-            <form action="mailto:your-email@example.com" method="post"
-                  enctype="text/plain">
-
-                <label for="senderName">Your Name:</label>
-                <input type="text" id="senderName" name="Name" required>
-
-                <label for="emailAddress">Email Address:</label>
-                <input type="email" id="emailAddress" name="Email" required>
-
-                <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="Subject" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="Message" rows="5" required></textarea>
-
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Zion James' Portfolio</p>
-    </footer>
-
-    <!-- JavaScript prompts the visitor for their name and updates the welcome message -->
-    <script>
-        "use strict";
-
-        // Ask the visitor for their name
-        var userName = prompt("Welcome! What is your name?");
-
-        // Display a personalized welcome message
-        if (userName !== null && userName.trim() !== "") {
-            document.getElementById("welcomeMessage").textContent =
-                "Welcome to my portfolio, " + userName + "!";
-        }
-    </script>
-
-</body>
+            
+        </script>
+    
+    </body>
 </html>
