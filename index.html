@@ -221,21 +221,25 @@
                     document.body.classList.remove("darkApp");
                 }
             });
-            // Adding an event listener to the Contact after pressing the Submit button
-            var submitButton = document.getElementById("submitButton");
-            
-            submitButton.addEventListener("click", function(event) {
+            // Adding a confirmation to the Contact form that will be timed
+            var contactDetails = document.getElementById("contactForm");
+            var confirmTime = null;
+            contactDetails.addEventListener("submit", function(event) {
                 event.preventDefault();
-            
-                var visitorName = document.getElementById("senderName").value;
-            
-                if (document.getElementById("contactForm").checkValidity()) {
-                    alert("Thank you, " + visitorName + ", your message has been sent!");
-                } else {
-                    document.getElementById("contactForm").reportValidity();
+                var somebodyName = document.getElementById("senderName").value;
+                if (!contactDetails.checkValidity()) {
+                    contactDetails.reportValidity();
+                    return;
                 }
+                //Creating a sending message dynamically
+                confirmTime = document.createElement("p");
+                confirmTime.textContent = "Sending message...";
+                contactDetails.appendChild(confirmTime);
+                //Showing the confirmation note after 2 seconds
+                setTimeout(function() {
+                    confirmTime.textContent = "Message sent successfully, " + somebodyName + "!";
+                }, 2000);
             });
-   
         </script>    
     </body>
 </html>
