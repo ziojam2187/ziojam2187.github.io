@@ -96,19 +96,13 @@
                 
                     <a href="https://www.figma.com/design/yWjUAQ6O0UmMqKM9BpwEVc/Memory-Line-Submission--1-?node-id=0-1&t=YYDXETZSNUG9OPOa-1"
                        target="_blank">
-                        <img src="https://placehold.co/300x150/2E7D32/FFFFFF?text=MemoryLine"
-                             alt="Memory Line project preview">
+                        <img src="memorylinescreenshot.png"
+                             alt="Memory Line app project preview">
                     </a>
-                
-                    <p>
-                        Memory Line is a mobile app that allows people to organize and revisit personal memories.
-                        The app features photo galleries, an interactive timeline, and collaborative memory sharing.
-                    </p>
                 </div>
-            
             </div>
             <!-- Projects section -->
-            <div id="myProjects">
+            <div id="myProjects" class="content-section">
                 <h2>My Projects</h2>
                 <p>
                     Here are some projects I have worked on during my courses.
@@ -206,8 +200,8 @@
             
             for (var i = 0; i < skills.length; i++) {
                 var skill = document.createElement("li");
-                skillPath.textContent = skills[i];
-                showSills.appendChild(skillPath);
+                skill.textContent = skills[i];
+                showSkills.appendChild(skill);
             }
             //The dark mode function
             var darkAppearance = document.getElementById("darkAppearance");
