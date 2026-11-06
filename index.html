@@ -203,18 +203,16 @@
         <!--Makes the visitor type their name and updates them with a welcome message -->
         <script>
             "use strict";
-    
-            //Asking for the visitor's name
-            var userName = prompt("Welcome! What is your name?");
-    
-            //Showing my welcome message
-            if (userName !== null && userName.trim() !== "") {
-                document.getElementById("welcomeMessage").textContent =
-                    "Welcome to my portfolio, " + userName + "!";
-            }
+            //Showing the modal when the page loads
+            var modWel = document.getElementById("modWel");
+            var modClose = document.getElementById("modClose");
+            //Closing the modal
+            modClose.addEventListener("click", function() {
+                modWel.classList.add("hidden");
+            });
             //Showing the Featured Content based on the number of projects
             var projectNum = document.querySelectorAll("#myProjects .project").length;
-            
+        
             if (projectNum < 3) {
                 document.getElementById("uniResources").style.display = "block";
                 document.getElementById("personalProjects").style.display = "block";
