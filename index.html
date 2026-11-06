@@ -171,19 +171,19 @@
             <p>&copy; 2026 Zion James' Portfolio</p>
         </footer>
     
-        <!-- JavaScript prompts the visitor for their name and updates the welcome message -->
+        <!--Makes the visitor type their name and updates them with a welcome message -->
         <script>
             "use strict";
     
-            // Ask the visitor for their name
+            //Asking for the visitor's name
             var userName = prompt("Welcome! What is your name?");
     
-            // Display a personalized welcome message
+            //Showing my welcome message
             if (userName !== null && userName.trim() !== "") {
                 document.getElementById("welcomeMessage").textContent =
                     "Welcome to my portfolio, " + userName + "!";
             }
-            // Display Featured Content based on the number of projects
+            //Showing the Featured Content based on the number of projects
             var projectNum = document.querySelectorAll("#myProjects .project").length;
             
             if (projectNum < 3) {
@@ -203,9 +203,12 @@
                 skill.textContent = skills[i];
                 showSkills.appendChild(skill);
             }
-            //The dark mode function
+            //Adding a new paragraph dynamically
+            var projSummary = document.createElement("p");
+            projSummary.textContent = "I complete hands-on projects to challenge and develop my programming skills.";
+            document.getElementById("myProjects").appendChild(projSummary);
             var darkAppearance = document.getElementById("darkAppearance");
-            
+            //The dark mode function
             darkAppearance.addEventListener("change", function() {
                 if (darkAppearance.checked) {
                     document.body.classList.add("darkApp");
@@ -213,7 +216,7 @@
                     document.body.classList.remove("darkApp");
                 }
             });
-            // Add an event listener to the Contact form Submit button
+            // Adding an event listener to the Contact after pressing the Submit button
             var submitButton = document.getElementById("submitButton");
             
             submitButton.addEventListener("click", function(event) {
@@ -228,9 +231,6 @@
                 }
             });
    
-
-            
-        </script>
-    
+        </script>    
     </body>
 </html>
