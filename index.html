@@ -271,7 +271,7 @@
             //Searching and saving projects using session storage
             var savedProjects = sessionStorage.getItem("projObject");
             if (savedProjects === null) {
-                sessionStorage.setItem("projectData", JSON.stringify(projObject));
+                sessionStorage.setItem("projObject", JSON.stringify(projObject));
             } else {
                 projObject = JSON.parse(savedProjects);
             }
