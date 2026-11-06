@@ -180,16 +180,6 @@
             modClose.addEventListener("click", function() {
                 modWel.classList.add("hidden");
             });
-            //Showing the Featured Content based on the number of projects
-            var projectNum = document.querySelectorAll("#myProjects .project").length;
-        
-            if (projectNum < 3) {
-                document.getElementById("uniResources").style.display = "block";
-                document.getElementById("personalProjects").style.display = "block";
-            } else {
-                document.getElementById("uniResources").style.display = "none";
-                document.getElementById("personalProjects").style.display = "block";
-            }
             // Making an array of skills
             var skills = ["HTML", "CSS", "JavaScript", "Git", "GitHub"];
             
@@ -296,6 +286,16 @@
                 projectBox.appendChild(projSummary);
                 projectBox.appendChild(projLink);
                 projectList.appendChild(projectBox);
+            }
+             //Showing the Featured Content based on the number of projects
+            var projectNum = document.querySelectorAll("#myProjects .project").length;
+        
+            if (projectNum < 3) {
+                document.getElementById("uniResources").style.display = "block";
+                document.getElementById("personalProjects").style.display = "block";
+            } else {
+                document.getElementById("uniResources").style.display = "none";
+                document.getElementById("personalProjects").style.display = "block";
             }
         </script>    
     </body>
